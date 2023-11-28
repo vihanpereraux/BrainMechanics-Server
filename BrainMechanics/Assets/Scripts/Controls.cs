@@ -15,7 +15,7 @@ public class Controls : MonoBehaviour
     List<GameObject> lightRowThreeLights = new List<GameObject>();
     List<GameObject> lightRowFourLights = new List<GameObject>();
 
-    private float rotationSpeed = .5f;
+    private float rotationSpeed = .8f;
     private float rotationMagnitude = 10f;
     
 
@@ -30,13 +30,14 @@ public class Controls : MonoBehaviour
     }
 
     void Update(){
-        float rotationAngle = (Mathf.Sin(Time.time * rotationSpeed) * rotationMagnitude) + 90;
-        for (int i = 0; i < lightRowOneLights.Count; i++){
-            lightRowOneLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
-            lightRowTwoLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
-            lightRowThreeLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
-            lightRowFourLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
-        }
+        // float rotationAngle = (Mathf.Sin(Time.time * rotationSpeed) * rotationMagnitude) + 90;
+        // float rotationAngleInverse = (Mathf.Sin(Time.time * rotationSpeed) * (rotationMagnitude * -1)) + 90;
+        // for (int i = 0; i < lightRowOneLights.Count; i++){
+        //     lightRowOneLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
+        //     lightRowTwoLights[i].transform.rotation = Quaternion.Euler(rotationAngleInverse, -90f, -90f);
+        //     lightRowThreeLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
+        //     lightRowFourLights[i].transform.rotation = Quaternion.Euler(rotationAngle, -90f, -90f);
+        // }
     }
 
     private IEnumerator RunFunc2SInterval(){

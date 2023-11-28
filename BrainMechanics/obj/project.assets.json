@@ -1,30 +1,11 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/Assembly-CSharp.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Assembly-CSharp.dll": {}
-        }
-      }
-    }
+    ".NETStandard,Version=v2.1": {}
   },
-  "libraries": {
-    "Assembly-CSharp/1.0.0": {
-      "type": "project",
-      "path": "Assembly-CSharp.csproj",
-      "msbuildProject": "Assembly-CSharp.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": [
-      "Assembly-CSharp >= 1.0.0"
-    ]
+    ".NETStandard,Version=v2.1": []
   },
   "packageFolders": {
     "/Users/vihanpereraux/.nuget/packages/": {}
@@ -32,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp-Editor.csproj",
-      "projectName": "Assembly-CSharp-Editor",
-      "projectPath": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp-Editor.csproj",
+      "projectUniqueName": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp.csproj",
+      "projectName": "Assembly-CSharp",
+      "projectPath": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp.csproj",
       "packagesPath": "/Users/vihanpereraux/.nuget/packages/",
       "outputPath": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/obj/",
       "projectStyle": "PackageReference",
@@ -50,11 +31,7 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {
-            "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp.csproj": {
-              "projectPath": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
