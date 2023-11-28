@@ -59,6 +59,7 @@
     <Compile Include="Assets/VolumetricLights-master/Assets/Standard Assets/Effects/ImageEffects/Scripts/PostEffectsBase.cs" />
     <Compile Include="Assets/VolumetricLights-master/Assets/Standard Assets/Effects/ImageEffects/Scripts/Tonemapping.cs" />
     <Compile Include="Assets/VolumetricLights-master/Assets/Scripts/VolumetricLightRenderer.cs" />
+    <Compile Include="Assets/Scripts/Controls.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/VolumetricLights-master/Assets/Standard Assets/Effects/ImageEffects/Shaders/Tonemapper.shader" />
