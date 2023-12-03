@@ -22,7 +22,11 @@ public class Controls : MonoBehaviour
     private float rotationSpeed = .8f;
     private float rotationMagnitude = 10f;
 
-    public GameObject testPointLight;
+    public GameObject testPointLight_1;
+    public GameObject testPointLight_2;
+    public GameObject testPointLight_3;
+    public GameObject testPointLight_4;
+
 
     // fog controlls
     // public Color fogColor = Color.gray;
@@ -39,7 +43,7 @@ public class Controls : MonoBehaviour
         }
 
         StartCoroutine(RunFunc2SInterval());
-        RenderSettings.fogMode = FogMode.Exponential;
+        RenderSettings.fogMode = FogMode.ExponentialSquared;
         StartCoroutine(RunFogControlFunc());
     }
 
@@ -48,7 +52,7 @@ public class Controls : MonoBehaviour
 
     private IEnumerator RunFunc2SInterval(){
         while (true){
-            ControlLightRowOne();
+            ControlLights();
             yield return new WaitForSeconds(.16f);
         }
     }
@@ -59,42 +63,63 @@ public class Controls : MonoBehaviour
         }
     }
 
-    private void ControlLightRowOne(){
+    private void ControlLights(){
         float testLightStarterPosition = -13f;
         int lowerIndex = 0;
         int upperIndex = 6;
         int randomIndex = UnityEngine.Random.Range(lowerIndex, upperIndex);
 
         // setting intensity for 0
-        for (int i = 0; i < lightRowOneLights.Count; i++){
+        for (int i = 0; i < 6; i++){
             lightRowOneLights[i].GetComponent<Light>().intensity = 0;
+            lightRowTwoLights[i].GetComponent<Light>().intensity = 0;
+            lightRowThreeLights[i].GetComponent<Light>().intensity = 0;
+            lightRowFourLights[i].GetComponent<Light>().intensity = 0;
         }        
+        testPointLight_1.GetComponent<Light>().intensity = 0f;
+        testPointLight_2.GetComponent<Light>().intensity = 0f;
+        testPointLight_3.GetComponent<Light>().intensity = 0f;
+        testPointLight_4.GetComponent<Light>().intensity = 0f;
 
         lightRowOneLights[randomIndex].GetComponent<Light>().intensity = 100;
+        lightRowTwoLights[randomIndex].GetComponent<Light>().intensity = 100;
+        lightRowThreeLights[randomIndex].GetComponent<Light>().intensity = 100;
+        lightRowFourLights[randomIndex].GetComponent<Light>().intensity = 100;
+
         switch (randomIndex){
             case 0:
-                testPointLight.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 0);
+                getLightSettings(testLightStarterPosition, randomIndex);
             break;
             case 1:
-                testPointLight.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 0);
+                getLightSettings(testLightStarterPosition, randomIndex);
             break;
             case 2:
-                testPointLight.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 0);
+                getLightSettings(testLightStarterPosition, randomIndex);
             break;
             case 3:
-                testPointLight.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 0);
+                getLightSettings(testLightStarterPosition, randomIndex);
             break;
             case 4:
-                testPointLight.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 0);
+                getLightSettings(testLightStarterPosition, randomIndex);
             break;
             case 5:
-                testPointLight.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 0);
+                getLightSettings(testLightStarterPosition, randomIndex);
             break;
         }
         Debug.Log(randomIndex);
     }
+    private void getLightSettings(float testLightStarterPosition, int randomIndex){
+        testPointLight_1.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 3);
+        testPointLight_2.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 7);
+        testPointLight_3.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 11);
+        testPointLight_4.transform.position = new Vector3(testLightStarterPosition + (5 * randomIndex), 3, 15);
+        testPointLight_1.GetComponent<Light>().intensity = 6.5f;
+        testPointLight_2.GetComponent<Light>().intensity = 6.5f;
+        testPointLight_3.GetComponent<Light>().intensity = 6.5f;
+        testPointLight_4.GetComponent<Light>().intensity = 6.5f;
+    }
 
     private void ControlFog(){
-        RenderSettings.fogDensity = UnityEngine.Random.Range(0.0f, 0.015f);
+        RenderSettings.fogDensity = UnityEngine.Random.Range(0.0f, 0.035f);
     }
 }
