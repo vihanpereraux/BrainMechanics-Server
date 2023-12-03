@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e6kgeQSuHQc1feRHC/1Vs6BpgoVgZFFIpVNfbUXs7RO2c7MEDLHI7dvEdI4qzkUvZKCdBksLaufVIKigyIFGrw==",
+  "dgSpecHash": "qw8nCmiHt/iwhD8byKP9mvQsyaht8Ut9q8BZ03/VUVYOb92yr+blXQSeI7E2VNh6WA+E8uNWvkfPxe+UeFxcBg==",
   "success": true,
-  "projectFilePath": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp.csproj",
+  "projectFilePath": "/Volumes/Transcend/UnityOtherProjects/BrainMechanicsOverview/BrainMechanics/Assembly-CSharp-Editor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
